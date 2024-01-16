@@ -1,0 +1,114 @@
+@import 'vars';
+@import 'header';
+@import 'footer';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url(https://www.toptal.com/designers/subtlepatterns/uploads/beige-tiles.png)
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.main {
+  font-size: 1.2em;
+  width: 98%;
+  text-align: center;
+  .picture{
+    width: 98%;
+    padding-left: 1%;
+    img {
+      width: 32.33%;
+      margin-left: 1%;
+      border-radius: 5px;
+      &:hover {
+        scale: 1.05;
+        transition: scale .5s ease-out ;
+      }
+      @media only screen and (max-width : $breakpoint_sm) {
+        display: block;
+        width: 90%;
+        margin: auto;
+        
+     }
+    }
+    @media only screen and (max-width : $breakpoint_sm) {
+      .img-disable {
+      display: none;
+    }
+    }
+   
+  }
+  
+  ul {
+    li {
+    margin-top: 10px;
+    text-align: justify;
+    list-style: none;
+    &:hover {
+      color: #0117a4;
+      scale: 1.02;
+    }
+    &:hover b {
+      cursor: pointer;
+      color: #000e6a;
+     }
+   }
+ }
+ h2 {
+  margin-left: 7%;
+ }
+  .map {
+    width: 90%;
+    height: auto;
+       span {
+        font-size: 1.3em;
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+        h3 {
+          margin-bottom: 0;
+        }  
+        display: block;
+        margin-left: 20%;
+       }
+       iframe {
+        display: block;
+        margin-left: auto;
+        margin-top: 30px;
+        width: 70vw;
+        height: 70vh;
+        
+        @media only screen and (max-width : $breakpoint_md) {
+          width: 70vw;
+          height: 60vh; 
+          margin-left: 15%;
+       }
+    }
+  }
+  @media only screen and (min-width : $breakpoint_xl) and (max-width : $breakpoint_xxl) {
+    font-size: 1em;
+    
+  }
+  @media only screen and (min-width : $breakpoint_md) and (max-width : $breakpoint_xl) {
+    font-size: .8em;
+   
+  }
+  @media only screen and (min-width : $breakpoint_sm) and (max-width : $breakpoint_md) {
+    font-size: .6em;
+  }
+  @media only screen and (max-width : $breakpoint_sm) {
+     font-size: .6em;
+     .sp-main {
+      display: none;
+    }
+ }
+}
